@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/form.css">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <div class="container-form-and-graphic">
+    <!-- form graphic -->
+    <div class="form-graphic-container">
+      <div class="form-bg-graphic"></div>
+      <div class="form-card form-card-reverse"></div>
+      <div class="form-card form-card-frontal"></div>
+    </div>
+    <!-- form -->
+    <div class="form-container">
+      <form action="" class="form">
+        <fieldset class="form-fieldset">
+          <!--  -->
+          <label for="cardholder-name">CARDHOLDER NAME</label>
+          <input id="cardholder-name" type="text" name="cardholder-name" placeholder="e.g. Jane Appleseed" required>
+          <!--  -->
+          <label for="cardholder-name">CARD NUMBER</label>
+          <input id="card-number" type="number" name="card-number" placeholder="e.g. 1234 5678 9123 0000" required>
+          <!--  -->
+          <div class="container-mmyy-cvc">
+            <div class="container-form-mmyy">
+              <p>EXP. DATE (MM/YY)</p>
+              <!-- month -->
+              <div class="contain-input-mmyy">
+                <label for="month"></label>
+                <input id="month" type="number" name="month" placeholder="MM" required>
+                <!-- year -->
+                <label for="year"></label>
+                <input id="year" type="number" name="year" placeholder="YY" required>
+              </div>
+            </div>
+
+            <!-- CVC -->
+            <div class="container-cvc">
+              <label for="cvc">CVC</label>
+              <input type="number" name="cvc" placeholder="e.g. 123" required>
+            </div>
+          </div>
+        </fieldset>
+        <!-- sumbit -->
+        <input type="submit" value="Confirm" class="form-submit">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
