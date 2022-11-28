@@ -20,11 +20,25 @@
     <div class="form-graphic-container">
       <div class="form-bg-graphic"></div>
       <div class="form-card form-card-reverse"></div>
-      <div class="form-card form-card-frontal"></div>
+      <div class="form-card form-card-frontal">
+        <div class="container-circles">
+          <div class="card-frontal-circles">
+            <div class="frontal-circle-white"></div>
+            <div class="frontal-circle-border"></div>
+          </div>
+        </div>
+        <div class="card-frontal-dates">
+          <div class="card-frontal-number">0000 0000 0000 0000</div>
+          <div class="card-frontal-name-and-date">
+            <div class="frontal-name">JANE APPLESEED</div>
+            <div class="frontal-date"> <span class="frontal-date-month">00</span>/<span class="frontal-date-year">00</span></div>
+          </div>   
+        </div>
+      </div>
     </div>
     <!-- form -->
     <div class="form-container">
-      <form action="" class="form">
+      <form action="" class="form" id="form">
         <fieldset class="form-fieldset">
           <!--  -->
           <label for="cardholder-name">CARDHOLDER NAME</label>
@@ -49,7 +63,7 @@
             <!-- CVC -->
             <div class="container-cvc">
               <label for="cvc">CVC</label>
-              <input type="number" name="cvc" placeholder="e.g. 123" required>
+              <input id="cvc" type="number" name="cvc" placeholder="e.g. 123" required>
             </div>
           </div>
         </fieldset>
@@ -57,7 +71,16 @@
         <input type="submit" value="Confirm" class="form-submit">
       </form>
     </div>
+    <!-- box for form-continue -->
+    <div class="form-continue" style="display: none;">
+      <div class="container-continue-check"></div>
+      <div class="container-continue-text">
+        <h2 class="continue-title">THANK YOU!</h2>
+        <p class="continue-paragraph">We've added your card details</p>
+      </div>
+      <a href="" class="continue-button-a">Continue</a>
+    </div>
   </div>
 </body>
-
+<script type="text/javascript" src="./script/form.js"></script>
 </html>

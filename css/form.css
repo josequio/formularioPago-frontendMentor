@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 }
+/* ------estyle for placeholder */
 ::-webkit-input-placeholder {
     color: rgba(0,0,0,0.2);
     font-weight: bold;
@@ -23,6 +24,7 @@
     font-weight: bold;
     font-size: 1rem;
 }
+/* ------------------------- */
 html{
     font-size: 16px;
     font-family: 'Space Grotesk', sans-serif;
@@ -40,16 +42,19 @@ label, p{
                          "form";
     grid-template-columns: 1fr;
     grid-template-rows: 0.7fr 1fr;
+   
 }
 /*form graphic*/
 .form-graphic-container{
     position: relative;
     grid-area: graphic;
     /* background-color: antiquewhite; */
+    
 }
 .form-bg-graphic{
-    background-color: rgb(0, 0, 0);
+    background:url(/images/bg-main-mobile.png);
     height: 80%;
+  
 }
 .form-card{
     width: 18.75rem;
@@ -62,6 +67,7 @@ label, p{
     background-image: url(/images/bg-card-back.png);
     background-size: cover;
 }
+/* DESING FRONTAL CARD */
 .form-card-frontal{
     position: absolute;
     top:6.5rem;
@@ -69,16 +75,62 @@ label, p{
     background-image: url(/images/bg-card-front.png);
     background-size: cover;
     box-shadow: 5px 41px 53px -25px rgba(0,0,0,0.48);
-
+    color: white;
+    padding: 1.5em;
 }
+/* -------------------------- */
+.container-circles{
+    height: 50%;
+}
+.card-frontal-circles{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.frontal-circle-white{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.frontal-circle-border{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.card-frontal-dates{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+/* ---------------------- */
+.card-frontal-number{}
+/* --------------------------- */
+.card-frontal-name-and-date{
+    display: flex;
+    justify-content: space-between;
+}
+.frontal-date,
+.frontal-name{
+    font-size: 0.75rem;
+}
+/* .frontal-date{
+    font-size: 0.75rem;
+} */
+/* -------------------------- */
+
 
 /*form*/
 .form-container{
-    max-width: 100vw;
+    max-width: 375px;
     grid-area: form;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 .form{
     width: 90vw;
@@ -127,8 +179,92 @@ label, p{
     background-color: black;
     color: rgb(255, 255, 255);
     font-size: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
 }
 .form-submit:hover{
     background-color: rgba(255, 4, 4, 0.621);
-   
+}
+/* --------------FORM CONTINUE------------------------- */
+.form-continue{
+    min-width: 375px;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+.container-continue-check{
+    background-image: url(/images/icon-complete.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.container-continue-text{
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+.continue-title{
+    font-weight:500;
+    letter-spacing: 0.2rem;
+}
+.continue-paragraph{
+    color: rgba(0,0,0,0.5);
+    font-weight: bold;
+    letter-spacing: 0.06rem;
+}
+.continue-button-a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0,0,0);
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    font-size: large;
+    
+}
+
+/* media querys for responsive--------------------------------- */
+@media screen and (min-width:800px){
+    .container-form-and-graphic{
+        display: grid;
+        grid-template-areas: "graphic form";                
+        grid-template-columns: 0.4fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .form-container{
+        max-width: 375px;
+        grid-area: form;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        /* justify-content: center;
+        align-items: center; */
+    }
+    .form-bg-graphic{
+        background:url(/images/bg-main-desktop.png);
+        height: 100%;
+    }
+    .form-card-reverse{
+        position: absolute;
+        top: 25rem;
+        right: -10rem;
+    }
+    .form-card-frontal{
+        position: absolute;
+        top: 12.5rem;
+        right: -6rem;
+    }
+    .form-continue{
+        max-width: 375px;
+        grid-area: form;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+    }
 }
